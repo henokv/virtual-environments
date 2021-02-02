@@ -45,9 +45,9 @@
             "managed_image_name": "ubuntu-18.04",
             "shared_image_gallery_destination": {
                 "subscription": "{{user `subscription_id`}}",
-                "resource_group": "{{user `shared_image_gallery_rg`}}"",
-                "gallery_name": "{{user `shared_image_gallery_name`}}"",
-                "image_name": "{{user `shared_image_name`}}"",
+                "resource_group": "{{user `shared_image_gallery_rg`}}",
+                "gallery_name": "{{user `shared_image_gallery_name`}}",
+                "image_name": "{{user `shared_image_name`}}",
                 "image_version": "{{user `shared_image_version`}}"
             }
             "temp_resource_group_name": "{{user `temp_resource_group_name`}}",
