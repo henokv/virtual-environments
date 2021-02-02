@@ -49,7 +49,7 @@
                 "gallery_name": "{{user `shared_image_gallery_name`}}",
                 "image_name": "{{user `shared_image_name`}}",
                 "image_version": "{{user `shared_image_version`}}"
-            }
+            },
             "temp_resource_group_name": "{{user `temp_resource_group_name`}}",
             "virtual_network_name": "{{user `virtual_network_name`}}",
             "virtual_network_resource_group_name": "{{user `virtual_network_resource_group_name`}}",
