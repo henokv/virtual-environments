@@ -22,7 +22,11 @@
         "image_os": "ubuntu18",
         "run_validation_diskspace": "false",
         "dockerhub_login": "{{env `DOCKERHUB_LOGIN`}}",
-        "dockerhub_password": "{{env `DOCKERHUB_PASSWORD`}}"
+        "dockerhub_password": "{{env `DOCKERHUB_PASSWORD`}}",
+        "shared_image_gallery_rg": "{{env `SHARED_IMAGE_GALLERY_RG`}}",
+        "shared_image_gallery_name": "{{env `SHARED_IMAGE_GALLERY_NAME`}}",
+        "shared_image_name": "{{env `SHARED_IMAGE_NAME`}}",
+        "shared_image_version": "{{env `SHARED_IMAGE_VERSION`}}"
     },
     "sensitive-variables": [
         "client_secret"
@@ -37,10 +41,16 @@
             "location": "{{user `location`}}",
             "vm_size": "{{user `vm_size`}}",
             "resource_group_name": "{{user `resource_group`}}",
-            "storage_account": "{{user `storage_account`}}",
+            "managed_image_resource_group_name": "{{user `resource_group`}}",
+            "managed_image_name": "ubuntu-18.04",
+            "shared_image_gallery_destination": {
+                "subscription": "{{user `subscription_id`}}",
+                "resource_group": "{{user `shared_image_gallery_rg`}}"",
+                "gallery_name": "{{user `shared_image_gallery_name`}}"",
+                "image_name": "{{user `shared_image_name`}}"",
+                "image_version": "{{user `shared_image_version`}}"
+            }
             "temp_resource_group_name": "{{user `temp_resource_group_name`}}",
-            "capture_container_name": "images",
-            "capture_name_prefix": "{{user `capture_name_prefix`}}",
             "virtual_network_name": "{{user `virtual_network_name`}}",
             "virtual_network_resource_group_name": "{{user `virtual_network_resource_group_name`}}",
             "virtual_network_subnet_name": "{{user `virtual_network_subnet_name`}}",
